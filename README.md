@@ -1,6 +1,10 @@
 # Terraform Provider Development Using Plugin Framework
 
-This is a Terraform provider example built using the Terraform Plugin Framework. It demonstrates how to implement a custom provider with resources using modern Terraform development practices.
+[![Terraform Example Provider Release](https://github.com/chefgs/terraform-provider-example/actions/workflows/release.yml/badge.svg)](https://github.com/chefgs/terraform-provider-example/actions/workflows/release.yml)
+
+## What is this repo contains?
+
+This is a Terraform provider name `example` - built using the Terraform Plugin Framework. It demonstrates how to implement a custom provider with resources using modern Terraform development practices.
 
 ## Requirements
 
