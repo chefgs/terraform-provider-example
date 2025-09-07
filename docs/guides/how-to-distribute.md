@@ -124,6 +124,42 @@ This automates the distribution process and ensures consistency across releases.
 5. **Sign your releases** for security verification
 6. **Test the installation process** on different platforms before release
 
+## Using the Provider Directly from GitHub
+
+Users can configure Terraform to use your provider directly from GitHub without publishing to the Terraform Registry. Here's a sample configuration that shows how to use this example provider from GitHub:
+
+```hcl
+terraform {
+  required_providers {
+    example = {
+      source  = "chefgs/example"
+      version = "1.0.0"
+    }
+  }
+}
+
+provider "example" {
+  # Provider configuration if needed
+}
+
+resource "example_server" "my_server" {
+  name     = "example-server-instance"
+  address  = "example.com"
+  port     = 8080
+  
+  # Add any other properties supported by your provider
+}
+```
+
+To use this configuration:
+
+1. Create a new directory for your Terraform project
+2. Create a `main.tf` file with the above content
+3. Run `terraform init` - Terraform will automatically download the provider from GitHub
+4. Run `terraform plan` and `terraform apply` to create resources
+
+This approach allows users to use your provider directly from GitHub without manual installation steps, as long as your repository follows the expected naming convention and structure.
+
 ## Summary
 
 Users do not need to build your provider from source if you provide pre-compiled binaries for their platform. The recommended approach is to distribute pre-built binaries for all major platforms, which users can download and place in their local Terraform plugins directory.
