@@ -4,7 +4,7 @@
 
 ## What is this repo contains?
 
-This is a Terraform provider name `example` - built using the Terraform Plugin Framework. It demonstrates how to implement a custom provider with resources using modern Terraform development practices.
+This is a Terraform provider named *`example`* - built using the Terraform Plugin Framework. It demonstrates how to implement a custom provider with resources using modern Terraform development practices.
 
 ## Requirements
 
